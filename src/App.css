@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #f0f0f0;
-  width: 375px;
+  /* width: 375px; */
   height: 100vh;
 }
 
@@ -44,10 +44,10 @@
 
 @media (max-width: 1440px) and (min-width: 720px) {
   .App{
-    width: auto;
+    width: 100%;
   }
   .App-header{
-    width:auto;
+    width:100%;
 
   }
 }

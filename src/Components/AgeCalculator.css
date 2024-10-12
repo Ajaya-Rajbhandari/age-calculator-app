@@ -151,7 +151,7 @@ span{
         padding: 0;
         padding-top: .5rem;
         padding-left: 2rem;
-        max-width: 500px;
+        /* max-width: 500px; */
     }
     .first-container{
         column-gap: 0px;   
