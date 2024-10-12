@@ -44,10 +44,10 @@
 
 @media (max-width: 1440px) and (min-width: 720px) {
   .App{
-    width: 100%;
+    width: auto;
   }
   .App-header{
-    width: 100%;
+    width:auto;
 
   }
 }
