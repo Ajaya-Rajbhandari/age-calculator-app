@@ -54,7 +54,7 @@ const AgeCalculator = () => {
             <div className="column">
               <label
                 style={{
-                  color: errors.day ? "red" : "",
+                  color: errors.month || errors.day || errors.year ? "red" : "",
                   letterSpacing: "5px",
                 }}
               >
@@ -64,10 +64,10 @@ const AgeCalculator = () => {
                 type="number"
                 name="day"
                 value={date.day}
+                placeholder="dd"
                 onChange={handleChange}
                 style={{
                   borderColor: Object.keys(errors).length > 0 ? "red" : "",
-                  letterSpacing: "5px",
                 }}
               />
               {errors.day && (
@@ -77,7 +77,7 @@ const AgeCalculator = () => {
             <div className="column">
               <label
                 style={{
-                  color: errors.month ? "red" : "",
+                  color: errors.month || errors.day || errors.year ? "red" : "",
                   letterSpacing: "5px",
                 }}
               >
@@ -87,6 +87,7 @@ const AgeCalculator = () => {
                 type="number"
                 name="month"
                 value={date.month}
+                placeholder="mm"
                 onChange={handleChange}
                 style={{
                   borderColor: Object.keys(errors).length > 0 ? "red" : "",
@@ -99,7 +100,7 @@ const AgeCalculator = () => {
             <div className="column">
               <label
                 style={{
-                  color: errors.year ? "red" : "",
+                  color: errors.month || errors.day || errors.year ? "red" : "",
                   letterSpacing: "5px",
                 }}
               >
@@ -109,6 +110,7 @@ const AgeCalculator = () => {
                 type="number"
                 name="year"
                 value={date.year}
+                placeholder="yyyy"
                 onChange={handleChange}
                 style={{
                   borderColor: Object.keys(errors).length > 0 ? "red" : "",

@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
-    font-family: 'Poppins';
+/* body{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    align-items: first baseline;
+    margin: 0 auto;
+    position:relative;
+    top: 5rem;
     background-color: #f0f0f0;
-}
+} */
 
 .card{
+    font-family: 'Poppins';
     background: white;
-    padding: 2.9rem 1.5rem 3rem 1.5rem;
-    border-radius: 2.5rem;
+    /* height: 350px; */
+    padding: 3rem 1rem;
+    /* padding: 3.5rem 2.5rem; */
+    border-radius: 1.5rem;
     border-bottom-right-radius: 6rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    /* width: 375px; */
     text-align: center;
     color: black;
+    position: relative;
+    top: 5rem;
 }
 
 .row{
@@ -30,6 +35,8 @@ body{
 .first-container{
     display: grid;
     grid-template-columns: repeat(3, auto);
+    column-gap: 10px;
+    margin-top: 20px;
 
 }
 .column{
@@ -51,18 +58,19 @@ body{
     align-items: baseline;
     margin-right: 50px;
     text-transform: uppercase;
-    font-size: .6rem;
+    font-size: .7rem;
 }
 
 input{
     width: 50%;
-    /* height: 30px; */
+    font-family: inherit;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 600;
     text-align: left;
     border: 1px solid #ccc;
     border-radius: 8px;
+    text-transform: uppercase;
     color: hsl(0, 0%, 8%);
     -moz-appearance: textfield;
 }
@@ -74,8 +82,9 @@ input::-webkit-inner-spin-button{
 }
 button{
     background-color: hsl(259, 100%, 65%);
-    width: 50px;
-    height: 50px;
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     z-index: 1;
     border: none;
@@ -134,4 +143,30 @@ button{
 span{
     color: hsl(0, 100%, 67%);
     font-size: 0.5rem;
+}
+
+@media (max-width: 1440px) and (min-width: 720px) {
+    .card{
+        padding-left: 2.5rem;
+        max-width: 600px;
+        height: 400px;
+        border-radius: 2rem;
+    }
+    .first-container{
+        column-gap: 0px;   
+        grid-template-columns: repeat(3,30%); 
+        padding-right: 10rem;
+    }
+    .column{
+        flex-basis: 100%;
+    }
+    .divider{
+        justify-content: end;
+        margin: 0rem;
+        margin-right: 4.5rem;
+        top: 0rem;
+    }
+    .divider button{
+        margin: 0rem;
+    }
 }
